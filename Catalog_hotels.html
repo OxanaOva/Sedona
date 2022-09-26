@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Гостиницы Седоны</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -11,7 +12,6 @@
       <a class="logo" href="Sedona_33.html">
       <img src="/images/logo.png" width="139" height="70" alt="Седона">
       </a>
-
       <ul class="site-menu">
         <li class="site-menu-item">
           <a class="site-menu-link" href="Sedona_33.html">Главная</a>
@@ -23,7 +23,6 @@
           <a class="site-menu-link">Гостиницы</a>
         </li>
       </ul>
-
       <div class="additional-menu">
       <a class="icon-button" href="#">
         <svg class="navigation-icon" width="20" height="19" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -39,13 +38,12 @@
       </div>
     </nav>
   </header>
-
   <main class="page-main">
     <div class="main-header">
       <h1 class="main-heading">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
+          <a class="breadcrumbs-link breadcrumbs-link-home" href="Sedona_33.html">
           <span class="visually-hidden">Главная страница</span>
           </a>
         </li>
@@ -55,7 +53,6 @@
           </a>
         </li>
       </ul>
-
       <section class="filter">
         <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -105,23 +102,21 @@
                 </li>
             </ul>
           </fieldset>
-
           <fieldset class="filter-fieldset filter-fieldset-price">
             <legend class="filter-title">Стоимость, ₽:</legend>
-
             <div class="range">
-              <label class="range-field">
-                <span class="range-title">от</span>
-                <input class="range-input" type="number" name="price-from" value="0" min="0" max="10000" step="100">
-              </label>
-
-              <label class="range-field">
-                <span class="range-title">до</span>
-                <input class="range-input" type="number" name="price-to" value="9000" min="0" max="10000" step="100">
-              </label>
-
+              <div class="range-fields">
+                <label class="range-field">
+                  <span class="range-title">от</span>
+                  <input class="range-input" type="number" name="price-from" value="0" min="0" max="10000" step="100" placeholder="0">
+                </label>
+                <label class="range-field">
+                  <span class="range-title">до</span>
+                  <input class="range-input" type="number" name="price-to" value="9000" min="0" max="10000" step="100" placeholder="10000">
+                </label>
+              </div>
               <div class="range-slider slider">
-                <div class="slider-bar">
+                <div class="slider-bar" style="margin-right: 50px;">
                   <button class="slider-thumb" type="button">
                     <span class="visually-hidden">Ручка минимальной цены</span>
                   </button>
@@ -132,15 +127,13 @@
               </div>
             </div>
           </fieldset>
-
           <div class="filter-buttons">
-            <button class="button" type="submit">Применить</button>
+            <button class="filter-submit button" type="submit">Применить</button>
             <button class="filter-reset" type="reset">Сбросить</button>
           </div>
         </form>
       </section>
     </div>
-
     <section class="catalog">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <div class="catalog-sort">
@@ -165,17 +158,17 @@
         </details>
         <ul class="view">
           <li class="view-item view-item-active">
-            <a class="view-link">
+            <a class="view-link view-link-cards" href="#">
               <span class="visually-hidden">Карточками</span>
             </a>
           </li>
           <li class="view-item">
-            <a class="view-link" href="#">
+            <a class="view-link view-link-slides" href="#">
               <span class="visually-hidden">Слайдами</span>
             </a>
           </li>
           <li class="view-item">
-            <a class="view-link" href="#">
+            <a class="view-link view-link-list" href="#">
               <span class="visually-hidden">Списком</span>
             </a>
           </li>
@@ -231,7 +224,7 @@
             <span class="card-description-defenition">От 2000 ₽</span>
         </p>
         <a class="button button-secondary" href="#">Подробнее</a>
-        <a class="card-chosen button" href="#">В избранном</a>
+        <a class="card-chosen button button-success" href="#">В избранном</a>
         <p class="star card-star star-two">
             <span class="visually-hidden">2 звезды</span>
         </p>
